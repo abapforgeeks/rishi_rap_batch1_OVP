@@ -1,0 +1,31 @@
+@Metadata.layer: #CORE
+annotate view ZC_Rishi_PO_Budget_Util_OVP with
+{
+  //ZC_Rishi_PO_Budget_Util_OVP
+  @UI.lineItem: [{ position: 10,label: 'Purchase Document',qualifier: 'Q1' }]
+  PurchaseDocument;
+  @UI.lineItem: [{ importance: #HIGH ,position:  20,qualifier: 'Q1'}]
+  @UI.dataPoint: { title: 'Created By' }
+  CreatedBy;
+  @UI: {
+  lineItem:[{  importance: #HIGH,position: 30,qualifier: 'Q1' }],
+  dataPoint: { title: 'Created On' }
+  }
+  CreatedOn;
+    @UI: {
+    dataPoint: {
+    title: 'Overall Budget',
+    valueFormat.numberOfFractionalDigits: 2,
+    minimumValue: 0.00,
+    maximumValue: 100.00,
+    criticalityCalculation: {
+        improvementDirection: #MINIMIZE,
+        toleranceRangeHighValue: 80.00,
+        deviationRangeHighValue: 100.00
+    }
+    }
+    }
+  @UI.lineItem: [{ position: 40,label:'Budget',type:#AS_DATAPOINT,qualifier: 'Q1' }]
+  BudgentUsage;
+
+}
