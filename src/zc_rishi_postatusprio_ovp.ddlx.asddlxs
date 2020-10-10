@@ -22,8 +22,6 @@ measures: ['SumofDocuments'],
 measureAttributes: [{ measure: 'SumofDocuments',role: #AXIS_1 }]
  }
 
-
-
 ]
 @UI.presentationVariant: [{ groupBy: ['PurchaseDocument'],qualifier: 'myKPI',visualizations: [{ element: 'SumofDocuments' }] }]
 annotate view zc_rishi_postatusprio_ovp with

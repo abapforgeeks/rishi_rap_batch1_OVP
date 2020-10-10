@@ -2,13 +2,13 @@
 annotate view ZC_Rishi_PO_Budget_Util_OVP with
 {
   //ZC_Rishi_PO_Budget_Util_OVP
-  @UI.lineItem: [{ position: 10,label: 'Purchase Document',qualifier: 'Q1' }]
+  @UI.lineItem: [{ position: 10,label: 'Purchase Document' }]
   PurchaseDocument;
-  @UI.lineItem: [{ importance: #HIGH ,position:  20,qualifier: 'Q1'}]
+  @UI.lineItem: [{ importance: #HIGH ,position:  20}]
   @UI.dataPoint: { title: 'Created By' }
   CreatedBy;
   @UI: {
-  lineItem:[{  importance: #HIGH,position: 30,qualifier: 'Q1' }],
+  lineItem:[{  importance: #HIGH,position: 30 }],
   dataPoint: { title: 'Created On' }
   }
   CreatedOn;
@@ -16,16 +16,16 @@ annotate view ZC_Rishi_PO_Budget_Util_OVP with
     dataPoint: {
     title: 'Overall Budget',
     valueFormat.numberOfFractionalDigits: 2,
-    minimumValue: 0.00,
-    maximumValue: 100.00,
+    minimumValue: 0,
+    maximumValue: 100,
     criticalityCalculation: {
         improvementDirection: #MINIMIZE,
-        toleranceRangeHighValue: 80.00,
-        deviationRangeHighValue: 100.00
+        toleranceRangeHighValue: 80,
+        deviationRangeHighValue: 100
     }
     }
     }
-  @UI.lineItem: [{ position: 40,label:'Budget',type:#AS_DATAPOINT,qualifier: 'Q1' }]
+  @UI.lineItem: [{ position: 40,label:'Budget',type:#AS_DATAPOINT}]
   BudgentUsage;
 
 }
