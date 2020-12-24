@@ -1,0 +1,34 @@
+@Metadata.layer: #CORE
+annotate view ZC_RISHI_POBudgetUtil with
+{
+
+  @UI.lineItem: [{ position: 10, label: 'Purchase Document'}]
+  PurchaseDocument;
+  @UI.lineItem: [{ position:  20,label: 'Description' }]
+  PurchaseDesc;
+  @UI.lineItem: [{ position: 30,label: 'Created By' }]
+  CreatedBy;
+  @UI.lineItem: [{ position: 40, label: 'Created On' }]
+  CreatedOn;
+   
+  @UI:{ 
+  
+  dataPoint:{ 
+  title: 'Overall Budget',
+  valueFormat.numberOfFractionalDigits:  2,
+  minimumValue: 0,
+  maximumValue: 100,
+  criticalityCalculation:{ 
+  
+  
+  improvementDirection:  #MINIMIZE,
+  toleranceRangeHighValue: 80,
+  deviationRangeHighValue: 100
+  }
+  
+  }
+  }  
+  @UI.lineItem: [{ position: 50,label: 'Budget Usage',type: #AS_DATAPOINT }]
+  BudgetUsage;
+
+}

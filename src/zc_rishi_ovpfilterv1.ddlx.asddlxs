@@ -1,0 +1,17 @@
+@Metadata.layer: #CORE
+annotate view ZC_RISHI_OVPFILTERV1
+    with 
+{
+
+    @UI.hidden: true
+    
+    PurchaseDocument;
+    @UI.selectionField: [{ position: 10 }]
+    @EndUserText.label: 'Purchase Priority'
+    PurchasePrio;
+
+    @UI.selectionField: [{ position: 10 }] 
+    @EndUserText.label: 'Purchase Status'  
+    PurchasestatuS;
+    
+}

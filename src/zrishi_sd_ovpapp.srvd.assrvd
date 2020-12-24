@@ -1,0 +1,14 @@
+@EndUserText.label: 'OVP Application'
+define service Zrishi_sd_ovpapp {
+  expose ZC_RISHI_OVPFILTERV1;
+  expose ZC_RISHI_OVPPRIOSTATUSV1;
+  expose ZC_RISHI_POBudgetUtil;
+  expose zc_rishi_POStatusVH;
+  expose ZI_Rishi_PurchaseDoc;
+  expose ZI_Rishi_PurchaseDocTotalPrice;
+  expose ZI_Rishi_PurchaseStatus;
+  expose ZI_Rishi_PurchasePriority;
+  expose ZI_RISHI_PENDINGPOFORAPPROVAL;
+  expose ZC_RISHI_PENDINGPOFORAPPROVAL;
+  expose ZC_RISHI_PURCHASEITEMS;
+}

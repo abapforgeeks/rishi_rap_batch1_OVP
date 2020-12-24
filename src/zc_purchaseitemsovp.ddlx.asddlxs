@@ -1,0 +1,14 @@
+@Metadata.layer: #CORE
+annotate view ZC_PURCHASEITEMSOVP with
+{
+  
+  @UI.lineItem: [{ position: 10,label: 'Purchase Document' ,importance: #HIGH}]
+  PODescription;
+  @UI.lineItem: [{ position: 20,label: 'Product Name',importance: #HIGH }]
+  PorductDesc;
+  @UI.lineItem: [{ position: 30,label: 'Quantity' }]
+  Quantity;
+  @UI.lineItem: [{ position: 40,label: 'PO Status',criticality: 'POStatus' }]
+  POStatus;
+
+}
